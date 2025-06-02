@@ -26,21 +26,38 @@
             color: #333;
         }
         
-        /* .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/img/hero-bg.jpg') center/cover no-repeat;
-            color: white;
-            padding: 8rem 0;
-            text-align: center;
+        .hero-section {
+            background: url('/img/bg1.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
         }
         
-        .hero-section h1 {
+       .hero-section h1 {
             font-size: 2.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
+
+        .hero-head{
+             /*background-color: #e78020; 
+             border-radius: 1rem;
+                /*padding: 3rem;*/
+    border-radius: 12px;
+    max-width: 800px;
+    margin: 0 auto;
+    backdrop-filter: blur(3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transform: translateY(0);
+    transition: var(--transition);
+    animation: float 6s ease-in-out infinite;
+        }
+        .hero-head p{
+            color: #e78020;
+        }
         
-        .hero-section .lead {
+       /* .hero-section .lead {
             font-size: 1.25rem;
             max-width: 800px;
             margin: 0 auto;
@@ -153,15 +170,16 @@
         <section class="hero-section">
             <div class="container">
                 <div class="hero-content">
-                    <h1 class="hero-title">CONFIEZ VOS TRAVAUX D'ÉTANCHÉITÉ À DES EXPERTS</h1>
-                    <p class="hero-subtitle">Solutions durables et professionnelles pour tous vos projets</p>
+                    <div class="hero-head bg-gradient-primary">
+                        <h1 class="hero-title">CONFIEZ VOS TRAVAUX D'ÉTANCHÉITÉ À DES EXPERTS</h1>
+                        <p class="hero-subtitle">Solutions durables et professionnelles pour tous vos projets</p>
+                    </div>
                     <div class="hero-cta">
                         <a href="Contact.html" class="cta-button">Demander un devis</a>
                         <a href="Service.html" class="cta-button secondary">Nos solutions</a>
                     </div>
                 </div>
             </div>
-            <div class="water-effect"></div>
         </section>
         
         <section class="intro-text">
@@ -196,8 +214,16 @@
                                 <img src="/img/terasse5.jpg" class="d-block w-100" alt="Exemple de terrasse étanche">
                             </div>
                             <div class="carousel-item">
-                                <img src="/img/terasse4.png" class="d-block w-100" alt="Rénovation de terrasse">
+                                <img src="/img/terrain1.jpg" class="d-block w-100" alt="Exemple de terrasse étanche">
                             </div>
+                            <div class="carousel-item">
+                                <img src="/img/Terasse6.jpg" class="d-block w-100" alt="Exemple de terrasse étanche">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="/img/terasse_2.jpeg" class="d-block w-100" alt="Exemple de terrasse étanche">
+                            </div>
+                            
+                            
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#terrasseCarousel" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
@@ -270,10 +296,10 @@
                                 <img src="/img/chenaux1.jpg" class="d-block w-100" alt="Chéneau en zinc">
                             </div>
                             <div class="carousel-item">
-                                <img src="/img/chenaux2.jpg" class="d-block w-100" alt="Chéneau intégré">
+                                <img src="/img/chenaux3.jpg" class="d-block w-100" alt="Chéneau intégré">
                             </div>
                             <div class="carousel-item">
-                                <img src="/img/chenaux3.jpg" class="d-block w-100" alt="Rénovation de chéneau">
+                                <img src="/img/chenaux4.jpg" class="d-block w-100" alt="Rénovation de chéneau">
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#chenauxCarousel" data-bs-slide="prev">
@@ -357,9 +383,6 @@
                                 <img src="/img/CONVOYAGE3.jpeg" class="d-block w-100" alt="Rénovation piscine">
                             </div>
                             <div class="carousel-item">
-                                <img src="/img/CONVOYAGE4.jpg" class="d-block w-100" alt="Rénovation piscine">
-                            </div>
-                            <div class="carousel-item">
                                 <img src="/img/CONVOYAGE5.jpg" class="d-block w-100" alt="Rénovation piscine">
                             </div>
                             <div class="carousel-item">
@@ -396,14 +419,24 @@
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/img/entretien1.webp" class="d-block w-100" alt="Entretien étanchéité">
+                                <img src="/img/piscine_j1.jpeg" class="d-block w-100" alt="Entretien étanchéité">
                             </div>
                             <div class="carousel-item">
-                                <img src="/img/entretien2.jpg" class="d-block w-100" alt="Inspection professionnelle">
+                                <img src="/img/piscine_j2.jpg" class="d-block w-100" alt="Inspection professionnelle">
                             </div>
+                            
                             <div class="carousel-item">
-                                <img src="/img/entretien3.webp" class="d-block w-100" alt="Nettoyage piscine">
+                                <img src="/img/piscine_j3.jpg" class="d-block w-100" alt="Nettoyage piscine">
                             </div>
+
+                            <div class="carousel-item">
+                                <img src="/img/piscine_j4.jpg" class="d-block w-100" alt="Nettoyage piscine">
+                            </div>
+
+                            <div class="carousel-item">
+                                <img src="/img/piscine_j5.jpg" class="d-block w-100" alt="Nettoyage piscine">
+                            </div>
+                            
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#entretienCarousel" data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
