@@ -3,161 +3,148 @@
     
     // Configuration
     const slideTimeout = 5000;
-    const transitionDuration = 600;
-    const easing = 'cubic-bezier(0.25, 0.8, 0.25, 1)';
+    const transitionDuration = 800; // Augmenté pour plus de fluidité
+    const easing = 'cubic-bezier(0.4, 0, 0.2, 1)'; // Courbe plus douce
     
     // Elements
     const prev = document.querySelector('#prev');
     const next = document.querySelector('#next');
     const $slides = document.querySelectorAll('.slide');
+    const slidesContainer = document.querySelector('.slides-container'); // Nouvel élément conteneur
     let $dots;
     let intervalId;
     let currentSlide = 0;
     let isAnimating = false;
+    let touchStartX = 0;
+    let touchEndX = 0;
 
     // Initialize carousel
     function initCarousel() {
-        // Create dots
+        // Création des dots
         const dotsContainer = document.querySelector('.carousel-dots');
         dotsContainer.innerHTML = '';
         
         $slides.forEach((_, index) => {
-            const dotClass = index === currentSlide ? 'active' : 'inactive';
-            const $dot = document.createElement('span');
-            $dot.className = `dot ${dotClass}`;
-            $dot.dataset.slideId = index;
-            dotsContainer.appendChild($dot);
+            const dot = document.createElement('span');
+            dot.className = 'dot';
+            dot.dataset.slideId = index;
+            dotsContainer.appendChild(dot);
         });
 
         $dots = document.querySelectorAll('.dot');
-        
-        // Set initial positions
-        updateSlidePositions();
-    }
-
-    // Update slide positions with smooth transition
-    function updateSlidePositions() {
-        isAnimating = true;
-        $slides.forEach((slide, index) => {
-            slide.style.transition = `transform ${transitionDuration}ms ${easing}`;
-            slide.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            // Reset transition after animation completes
-            slide.addEventListener('transitionend', () => {
-                isAnimating = false;
-            }, { once: true });
-        });
-        
         updateDots();
-    }
-
-    // Update dot indicators
-    function updateDots() {
-        $dots.forEach(($dot, index) => {
-            $dot.classList.remove('active', 'inactive');
-            $dot.classList.add(index === currentSlide ? 'active' : 'inactive');
+        
+        // Optimisation: Utiliser translate3d pour hardware acceleration
+        slidesContainer.style.transformStyle = 'preserve-3d';
+        $slides.forEach(slide => {
+            slide.style.willChange = 'transform';
         });
     }
 
-    // Navigate to specific slide
-    function slideTo(index) {
+    // Animation fluide avec requestAnimationFrame
+    function animateSlides() {
+        isAnimating = true;
+        slidesContainer.style.transition = `transform ${transitionDuration}ms ${easing}`;
+        slidesContainer.style.transform = `translate3d(-${currentSlide * 100}%, 0, 0)`;
+        
+        // Gestion propre de la fin de l'animation
+        const onTransitionEnd = () => {
+            slidesContainer.removeEventListener('transitionend', onTransitionEnd);
+            isAnimating = false;
+        };
+        slidesContainer.addEventListener('transitionend', onTransitionEnd, { once: true });
+    }
+
+    // Mise à jour des dots
+    function updateDots() {
+        $dots.forEach((dot, index) => {
+            dot.classList.toggle('active', index === currentSlide);
+        });
+    }
+
+    // Navigation vers un slide spécifique
+    function slideTo(index, instant = false) {
         if (isAnimating) return;
         
-        // Handle wrap-around
-        if (index >= $slides.length) {
-            currentSlide = 0;
-        } else if (index < 0) {
-            currentSlide = $slides.length - 1;
-        } else {
-            currentSlide = index;
+        // Gestion du débordement
+        currentSlide = (index + $slides.length) % $slides.length;
+        
+        if (instant) {
+            slidesContainer.style.transition = 'none';
+            slidesContainer.style.transform = `translate3d(-${currentSlide * 100}%, 0, 0)`;
+            // Force le recalcul des styles
+            void slidesContainer.offsetWidth; // Trigger reflow
         }
         
-        updateSlidePositions();
+        animateSlides();
+        updateDots();
         resetInterval();
     }
 
-    // Auto-advance slides
-    function showNextSlide() {
-        slideTo(currentSlide + 1);
-    }
-
-    // Reset autoplay interval
-    function resetInterval() {
-        clearInterval(intervalId);
-        intervalId = setInterval(showNextSlide, slideTimeout);
-    }
-
-    // Event listeners
-    function setupEventListeners() {
-        // Dot navigation
-        $dots.forEach(($dot, index) => {
-            $dot.addEventListener('click', () => slideTo(index));
-        });
-
-        // Arrow navigation
-        prev.addEventListener('click', () => {
-            slideTo(currentSlide - 1);
-        });
-        
-        next.addEventListener('click', () => {
+    // Défilement automatique
+    function startAutoPlay() {
+        intervalId = setInterval(() => {
+            if (document.hidden) return; // Pause si l'onglet est inactif
             slideTo(currentSlide + 1);
-        });
-
-        // Pause on hover/touch
-        $slides.forEach($slide => {
-            // Mouse events
-            $slide.addEventListener('mouseenter', () => {
-                clearInterval(intervalId);
-            });
-            
-            $slide.addEventListener('mouseleave', resetInterval);
-
-            // Touch events
-            let touchStartX = 0;
-            let touchEndX = 0;
-            
-            $slide.addEventListener('touchstart', (e) => {
-                clearInterval(intervalId);
-                touchStartX = e.touches[0].clientX;
-            }, { passive: true });
-            
-            $slide.addEventListener('touchend', (e) => {
-                touchEndX = e.changedTouches[0].clientX;
-                handleSwipe();
-                resetInterval();
-            }, { passive: true });
-        });
-
-        // Keyboard navigation
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'ArrowLeft') {
-                slideTo(currentSlide - 1);
-            } else if (e.key === 'ArrowRight') {
-                slideTo(currentSlide + 1);
-            }
-        });
+        }, slideTimeout);
     }
 
-    // Handle swipe gestures
-    function handleSwipe() {
-        const swipeThreshold = 50;
-        const difference = touchStartX - touchEndX;
+    // Gestion des événements
+    function setupEventListeners() {
+        // Navigation par dots
+        $dots.forEach((dot, index) => {
+            dot.addEventListener('click', () => slideTo(index));
+        });
+
+        // Boutons précédent/suivant
+        prev.addEventListener('click', () => slideTo(currentSlide - 1));
+        next.addEventListener('click', () => slideTo(currentSlide + 1));
+
+        // Pause au survol
+        slidesContainer.addEventListener('mouseenter', () => clearInterval(intervalId));
+        slidesContainer.addEventListener('mouseleave', startAutoPlay);
+
+        // Gestes tactiles
+        slidesContainer.addEventListener('touchstart', (e) => {
+            clearInterval(intervalId);
+            touchStartX = e.touches[0].clientX;
+        }, { passive: true });
         
-        if (difference > swipeThreshold) {
-            slideTo(currentSlide + 1); // Swipe left
-        } else if (difference < -swipeThreshold) {
-            slideTo(currentSlide - 1); // Swipe right
-        }
+        slidesContainer.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].clientX;
+            handleSwipe();
+            startAutoPlay();
+        }, { passive: true });
+
+        // Navigation clavier
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowLeft') slideTo(currentSlide - 1);
+            if (e.key === 'ArrowRight') slideTo(currentSlide + 1);
+        });
+
+        // Optimisation: Pause quand l'onglet est inactif
+        document.addEventListener('visibilitychange', () => {
+            document.hidden ? clearInterval(intervalId) : startAutoPlay();
+        });
     }
 
-    // Initialize everything
+    // Gestion du swipe
+    function handleSwipe() {
+        const diff = touchStartX - touchEndX;
+        if (Math.abs(diff) < 50) return; // Seuil minimal
+        
+        if (diff > 0) slideTo(currentSlide + 1); // Swipe gauche
+        else slideTo(currentSlide - 1); // Swipe droit
+    }
+
+    // Initialisation
     initCarousel();
     setupEventListeners();
-    intervalId = setInterval(showNextSlide, slideTimeout);
+    startAutoPlay();
 
-    // Handle window resize
+    // Redimensionnement
     window.addEventListener('resize', () => {
-        updateSlidePositions();
+        slideTo(currentSlide, true); // Répositionnement instantané
     });
 
 })();
