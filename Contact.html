@@ -20,8 +20,9 @@
         <section id="contact"
             class="contact-section bg-white rounded-4 shadow-sm p-4 p-md-5 mb-3 animate__animated animate__fadeIn">
             <div class="section-header text-center mb-5">
-                <h1 class="display-5 fw-bold text-primary mb-3">Contactez-nous</h1>
-                <p class="lead text-muted">Notre équipe est à votre écoute pour répondre à toutes vos questions.</p>
+                <h1 class="display-5 fw-bold text-primary mb-3" data-i18n="contact-title">Contactez-nous</h1>
+                <p class="lead text-muted" data-i18n="contact-subtitle">Notre équipe est à votre écoute pour répondre à
+                    toutes vos questions.</p>
                 <div class="divider mx-auto bg-primary"></div>
             </div>
 
@@ -33,8 +34,9 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control form-control-lg" id="fullName"
-                                        placeholder="Vos noms et prénoms" required>
-                                    <label for="fullName">Noms et Prénoms <span class="text-danger">*</span></label>
+                                        placeholder="Vos noms et prénoms" data-i18n="contact-name-placeholder" required>
+                                    <label for="fullName"><span data-i18n="contact-name-label">Noms et Prénoms</span>
+                                        <span class="text-danger">*</span></label>
                                     <div class="invalid-feedback">
                                         Veuillez entrer votre nom complet.
                                     </div>
@@ -44,8 +46,8 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control form-control-lg" id="emailAddress"
-                                        placeholder="votre@email.com">
-                                    <label for="emailAddress">Adresse mail</label>
+                                        placeholder="votre@email.com" data-i18n="contact-email-placeholder">
+                                    <label for="emailAddress" data-i18n="contact-email-label">Adresse mail</label>
                                     <div class="invalid-feedback">
                                         Veuillez entrer une adresse email valide.
                                     </div>
@@ -55,9 +57,9 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="tel" class="form-control form-control-lg" id="phoneNumber"
-                                        placeholder="6XX XXX XXX" required>
-                                    <label for="phoneNumber">Numéro de téléphone <span
-                                            class="text-danger">*</span></label>
+                                        placeholder="6XX XXX XXX" data-i18n="contact-phone-placeholder" required>
+                                    <label for="phoneNumber"><span data-i18n="contact-phone-label">Numéro de
+                                            téléphone</span> <span class="text-danger">*</span></label>
                                     <div class="invalid-feedback">
                                         Veuillez entrer un numéro de téléphone valide.
                                     </div>
@@ -67,12 +69,15 @@
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <select class="form-select" id="subject">
-                                        <option value="Demande de devis">Demande de devis</option>
-                                        <option value="Question technique">Question technique</option>
-                                        <option value="Support client">Support client</option>
-                                        <option value="Autre">Autre</option>
+                                        <option value="Demande de devis" data-i18n="contact-subject-quote">Demande de
+                                            devis</option>
+                                        <option value="Question technique" data-i18n="contact-subject-tech">Question
+                                            technique</option>
+                                        <option value="Support client" data-i18n="contact-subject-support">Support
+                                            client</option>
+                                        <option value="Autre" data-i18n="contact-subject-other">Autre</option>
                                     </select>
-                                    <label for="subject">Sujet</label>
+                                    <label for="subject" data-i18n="contact-subject-label">Sujet</label>
                                 </div>
                             </div>
 
@@ -80,8 +85,9 @@
                                 <div class="form-floating">
                                     <textarea class="form-control" id="messageText" style="height: 150px"
                                         placeholder="Décrivez votre projet ou posez votre question..."
-                                        required></textarea>
-                                    <label for="messageText">Votre message <span class="text-danger">*</span></label>
+                                        data-i18n="contact-message-placeholder" required></textarea>
+                                    <label for="messageText"><span data-i18n="contact-message-label">Votre
+                                            message</span> <span class="text-danger">*</span></label>
                                     <div class="invalid-feedback">
                                         Veuillez écrire votre message.
                                     </div>
@@ -90,7 +96,8 @@
 
                             <div class="col-12 text-center mt-4">
                                 <button type="submit" class="btn btn-primary btn-lg px-5 py-3 fw-bold" target="_blank">
-                                    <i class='bx bx-paper-plane me-2'></i> Envoyer le message
+                                    <i class='bx bx-paper-plane me-2'></i> <span data-i18n="btn-send">Envoyer le
+                                        message</span>
                                 </button>
                             </div>
                         </div>
@@ -100,7 +107,8 @@
 
             <!-- Social Media -->
             <div class="social-section text-center mt-5 pt-5">
-                <h3 class="h5 text-uppercase text-muted mb-4">Ou contactez-nous directement</h3>
+                <h3 class="h5 text-uppercase text-muted mb-4" data-i18n="contact-direct">Ou contactez-nous directement
+                </h3>
                 <div class="d-flex justify-content-center gap-3">
                     <a href="https://www.facebook.com/profile.php?id=100092855307952&mibextid=ZbWKwL"
                         class="social-icon btn btn-outline-primary rounded-circle" target="_blank" aria-label="Facebook"
@@ -130,7 +138,7 @@
         <section id="partners"
             class="partners-section bg-white rounded-4 shadow-sm p-4 p-md-5 text-center animate__animated animate__fadeIn">
             <div class="section-header mb-5">
-                <h2 class="display-6 fw-bold text-primary">Ils nous font confiance</h2>
+                <h2 class="display-6 fw-bold text-primary" data-i18n="trust-title">Ils nous font confiance</h2>
                 <div class="divider mx-auto bg-primary"></div>
             </div>
 

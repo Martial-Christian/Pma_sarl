@@ -19,14 +19,17 @@
             <div class="container py-5">
                 <div class="row align-items-center">
                     <div class="col-lg-8 mx-auto text-center">
-                        <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Foire Aux Questions
+                        <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown"
+                            data-i18n="faq-hero-title">Foire Aux Questions
                         </h1>
-                        <p class="lead mb-4 animate__animated animate__fadeInUp">Trouvez des réponses à vos questions
+                        <p class="lead mb-4 animate__animated animate__fadeInUp" data-i18n="faq-hero-subtitle">Trouvez
+                            des réponses à vos questions
                             sur la prévention et la réparation des fuites d'eau</p>
                         <div class="search-bar animate__animated animate__fadeInUp animate__delay-1s">
                             <div class="input-group mb-3 mx-auto" style="max-width: 500px;">
                                 <input type="text" class="form-control form-control-lg"
-                                    placeholder="Rechercher une question..." aria-label="Rechercher">
+                                    placeholder="Rechercher une question..." data-i18n="faq-search-placeholder"
+                                    aria-label="Rechercher">
                                 <button class="btn btn-light" type="button">
                                     <i class='bx bx-search'></i>
                                 </button>
@@ -47,21 +50,26 @@
                     <div class="sticky-top pt-3" style="top: 100px;">
                         <div class="list-group faq-nav">
                             <a href="#generales" class="list-group-item list-group-item-action active">
-                                <i class='bx bx-help-circle me-2'></i> Généralités
+                                <i class='bx bx-help-circle me-2'></i> <span
+                                    data-i18n="faq-nav-general">Généralités</span>
                             </a>
                             <a href="#causes" class="list-group-item list-group-item-action">
-                                <i class='bx bx-question-mark me-2'></i> Causes des fuites
+                                <i class='bx bx-question-mark me-2'></i> <span data-i18n="faq-nav-causes">Causes des
+                                    fuites</span>
                             </a>
                             <a href="#solutions" class="list-group-item list-group-item-action">
-                                <i class='bx bx-wrench me-2'></i> Solutions et réparations
+                                <i class='bx bx-wrench me-2'></i> <span data-i18n="faq-nav-solutions">Solutions et
+                                    réparations</span>
                             </a>
                             <a href="#prevention" class="list-group-item list-group-item-action">
-                                <i class='bx bx-shield-alt-2 me-2'></i> Prévention et maintenance
+                                <i class='bx bx-shield-alt-2 me-2'></i> <span data-i18n="faq-nav-prevention">Prévention
+                                    et maintenance</span>
                             </a>
                         </div>
                         <div class="mt-4 text-center">
                             <a href="Contact.html" class="btn btn-outline-primary w-100">
-                                <i class='bx bx-message-rounded me-2'></i> Poser une question
+                                <i class='bx bx-message-rounded me-2'></i> <span data-i18n="faq-ask-question">Poser une
+                                    question</span>
                             </a>
                         </div>
                     </div>
@@ -72,7 +80,7 @@
                     <div id="generales" class="faq-section mb-5">
                         <div class="d-flex align-items-center mb-4">
                             <i class='bx bx-help-circle fs-1 text-primary me-3'></i>
-                            <h2 class="mb-0">Généralités</h2>
+                            <h2 class="mb-0" data-i18n="faq-nav-general">Généralités</h2>
                         </div>
 
                         <div class="accordion" id="accordionGenerales">
@@ -81,20 +89,22 @@
                                 <h3 class="accordion-header" id="headingOne">
                                     <button class="accordion-button collapsed fw-bold" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseOne">
-                                        Qu'est-ce que l'étancheité quel est son rôle ?
+                                        <span data-i18n="faq-q-role">Qu'est-ce que l'étancheité quel est son rôle
+                                            ?</span>
                                     </button>
                                 </h3>
                                 <div id="collapseOne" class="accordion-collapse collapse"
                                     data-bs-parent="#accordionGenerales">
                                     <div class="accordion-body">
-                                        <p>Le Programme de Prévention des Fuites d'Eau (PMAP) est une initiative visant
+                                        <p data-i18n="faq-a-role-p">Le Programme de Prévention des Fuites d'Eau (PMAP)
+                                            est une initiative visant
                                             à identifier, prévenir et réparer les fuites d'eau dans les infrastructures
                                             résidentielles et commerciales. Notre rôle inclut :</p>
                                         <ul>
-                                            <li>Diagnostic précis des fuites</li>
-                                            <li>Réparations durables</li>
-                                            <li>Conseils de prévention</li>
-                                            <li>Sensibilisation aux bonnes pratiques</li>
+                                            <li data-i18n="faq-role-li1">Diagnostic précis des fuites</li>
+                                            <li data-i18n="faq-role-li2">Réparations durables</li>
+                                            <li data-i18n="faq-role-li3">Conseils de prévention</li>
+                                            <li data-i18n="faq-role-li4">Sensibilisation aux bonnes pratiques</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -105,31 +115,41 @@
                                 <h3 class="accordion-header" id="headingTwo">
                                     <button class="accordion-button collapsed fw-bold" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseTwo">
-                                        Comment savoir si j'ai une fuite d'eau cachée ?
+                                        <span data-i18n="faq-q-hidden">Comment savoir si j'ai une fuite d'eau cachée
+                                            ?</span>
                                     </button>
                                 </h3>
                                 <div id="collapseTwo" class="accordion-collapse collapse"
                                     data-bs-parent="#accordionGenerales">
                                     <div class="accordion-body">
-                                        <p>Plusieurs signes peuvent indiquer une fuite cachée :</p>
+                                        <p data-i18n="faq-a-hidden-p">Plusieurs signes peuvent indiquer une fuite cachée
+                                            :</p>
                                         <div class="row">
                                             <div class="col-md-6">
                                                 <ul>
-                                                    <li>Augmentation anormale de votre facture d'eau</li>
-                                                    <li>Bruits d'eau courante lorsque tous les robinets sont fermés</li>
-                                                    <li>Taches d'humidité sur les murs ou plafonds</li>
+                                                    <li data-i18n="faq-hidden-li1">Augmentation anormale de votre
+                                                        facture d'eau</li>
+                                                    <li data-i18n="faq-hidden-li2">Bruits d'eau courante lorsque tous
+                                                        les robinets sont fermés</li>
+                                                    <li data-i18n="faq-hidden-li3">Taches d'humidité sur les murs ou
+                                                        plafonds</li>
                                                 </ul>
                                             </div>
                                             <div class="col-md-6">
                                                 <ul>
-                                                    <li>Moisissures ou odeurs de moisi persistantes</li>
-                                                    <li>Baisse de pression d'eau inexpliquée</li>
-                                                    <li>Zone de sol anormalement humide ou chaude</li>
+                                                    <li data-i18n="faq-hidden-li4">Moisissures ou odeurs de moisi
+                                                        persistantes</li>
+                                                    <li data-i18n="faq-hidden-li5">Baisse de pression d'eau inexpliquée
+                                                    </li>
+                                                    <li data-i18n="faq-hidden-li6">Zone de sol anormalement humide ou
+                                                        chaude</li>
                                                 </ul>
                                             </div>
                                         </div>
-                                        <p class="mt-3"><strong>Conseil :</strong> Effectuez un test simple en relevant
-                                            votre compteur d'eau le soir et le matin sans utiliser d'eau entre-temps.
+                                        <p class="mt-3"><strong data-i18n="faq-hidden-tip">Effectuez un test simple en
+                                                relevant
+                                                votre compteur d'eau le soir et le matin sans utiliser d'eau
+                                                entre-temps.</strong>
                                         </p>
                                     </div>
                                 </div>
@@ -189,7 +209,7 @@
                     <div id="causes" class="faq-section mb-5">
                         <div class="d-flex align-items-center mb-4">
                             <i class='bx bx-question-mark fs-1 text-primary me-3'></i>
-                            <h2 class="mb-0">Causes des fuites</h2>
+                            <h2 class="mb-0" data-i18n="faq-nav-causes">Causes des fuites</h2>
                         </div>
 
                         <div class="accordion" id="accordionCauses">
@@ -198,7 +218,8 @@
                                 <h3 class="accordion-header" id="headingFour">
                                     <button class="accordion-button collapsed fw-bold" type="button"
                                         data-bs-toggle="collapse" data-bs-target="#collapseFour">
-                                        Quelles sont les principales causes des fuites d'eau ?
+                                        <span data-i18n="faq-q-causes">Quelles sont les principales causes des fuites
+                                            d'eau ?</span>
                                     </button>
                                 </h3>
                                 <div id="collapseFour" class="accordion-collapse collapse"
@@ -209,13 +230,16 @@
                                                 <div class="card h-100 border-0 shadow-sm">
                                                     <div class="card-body">
                                                         <h5 class="card-title text-danger"><i
-                                                                class='bx bx-error-circle me-2'></i> Causes mécaniques
+                                                                class='bx bx-error-circle me-2'></i> <span
+                                                                data-i18n="faq-causes-mech">Causes mécaniques</span>
                                                         </h5>
                                                         <ul>
-                                                            <li>Usure des joints et raccords</li>
-                                                            <li>Corrosion des tuyaux</li>
-                                                            <li>Pression d'eau excessive</li>
-                                                            <li>Vibrations ou mouvements du bâtiment</li>
+                                                            <li data-i18n="faq-mech-li1">Usure des joints et raccords
+                                                            </li>
+                                                            <li data-i18n="faq-mech-li2">Corrosion des tuyaux</li>
+                                                            <li data-i18n="faq-mech-li3">Pression d'eau excessive</li>
+                                                            <li data-i18n="faq-mech-li4">Vibrations ou mouvements du
+                                                                bâtiment</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -224,13 +248,16 @@
                                                 <div class="card h-100 border-0 shadow-sm">
                                                     <div class="card-body">
                                                         <h5 class="card-title text-danger"><i
-                                                                class='bx bx-error-circle me-2'></i> Causes
-                                                            environnementales</h5>
+                                                                class='bx bx-error-circle me-2'></i> <span
+                                                                data-i18n="faq-causes-env">Causes
+                                                                environnementales</span></h5>
                                                         <ul>
-                                                            <li>Gel et dégel des canalisations</li>
-                                                            <li>Racines d'arbres</li>
-                                                            <li>Mouvements de terrain</li>
-                                                            <li>Mauvaises installations initiales</li>
+                                                            <li data-i18n="faq-env-li1">Gel et dégel des canalisations
+                                                            </li>
+                                                            <li data-i18n="faq-env-li2">Racines d'arbres</li>
+                                                            <li data-i18n="faq-env-li3">Mouvements de terrain</li>
+                                                            <li data-i18n="faq-env-li4">Mauvaises installations
+                                                                initiales</li>
                                                         </ul>
                                                     </div>
                                                 </div>
@@ -560,11 +587,14 @@
 
                     <!-- Call to Action -->
                     <div class="bg-light p-5 rounded-3 text-center mt-5">
-                        <h3 class="mb-4">Vous ne trouvez pas la réponse à votre question ?</h3>
-                        <p class="mb-4">Notre équipe d'experts est à votre disposition pour répondre à toutes vos
+                        <h3 class="mb-4" data-i18n="faq-not-found">Vous ne trouvez pas la réponse à votre question ?
+                        </h3>
+                        <p class="mb-4" data-i18n="faq-not-found-desc">Notre équipe d'experts est à votre disposition
+                            pour répondre à toutes vos
                             interrogations.</p>
                         <a href="Contact.html" class="btn btn-primary btn-lg px-5">
-                            <i class='bx bx-message-rounded me-2'></i> Contactez-nous
+                            <i class='bx bx-message-rounded me-2'></i> <span
+                                data-i18n="contact-title">Contactez-nous</span>
                         </a>
                     </div>
                 </div>
