@@ -1,0 +1,85 @@
+/* Additional Mobile Touch Optimizations */
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+
+    /* Ensure all clickable elements are at least 44px for better touch */
+    a,
+    button,
+    .btn,
+    .nav-link,
+    .accordion-button {
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Better spacing for touch */
+    .navbar-nav .nav-item {
+        margin-bottom: 0.5rem;
+    }
+
+    /* Larger tap areas for carousel controls */
+    .carousel-control-prev,
+    .carousel-control-next {
+        width: 15%;
+        opacity: 0.8;
+    }
+
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    /* Better form inputs on mobile */
+    input,
+    textarea,
+    select {
+        font-size: 16px;
+        /* Prevents zoom on iOS */
+        padding: 0.75rem;
+    }
+
+    /* Smooth scrolling */
+    html {
+        scroll-behavior: smooth;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Prevent text size adjustment on orientation change */
+    html {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+    }
+}
+
+/* Landscape mobile optimizations */
+@media (max-width: 768px) and (orientation: landscape) {
+    .hero-section {
+        padding: 4rem 1rem 3rem;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .carousel-item img {
+        height: 280px;
+    }
+}
+
+/* High DPI screens */
+@media (-webkit-min-device-pixel-ratio: 2),
+(min-resolution: 192dpi) {
+
+    /* Ensure images look sharp on retina displays */
+    img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}

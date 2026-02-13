@@ -1,0 +1,240 @@
+/* Axter-Inspired Navigation */
+.axter-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--pure-white);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  z-index: 5000;
+  transition: var(--transition);
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Burger Menu Button (Left) */
+.burger-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 10;
+}
+
+.burger-menu span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--dark-charcoal);
+  transition: var(--transition);
+}
+
+.burger-menu:hover span {
+  background-color: var(--primary-green);
+}
+
+/* Logo (Center) */
+.navbar-brand {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 50px;
+  transition: var(--transition);
+}
+
+/* Action Icons (Right) */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.lang-toggle {
+  background: none;
+  border: 1px solid var(--primary-green);
+  color: var(--primary-green);
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: var(--transition);
+  min-width: 40px;
+}
+
+.lang-toggle:hover {
+  background: var(--primary-green);
+  color: var(--white);
+}
+
+.nav-icon {
+  color: var(--dark-charcoal);
+  font-size: 1.5rem;
+  text-decoration: none;
+  transition: var(--transition);
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.nav-icon:hover {
+  color: var(--primary-green);
+}
+
+/* Slide-in Menu Panel */
+.menu-panel {
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 320px;
+  height: 100vh;
+  background-color: var(--dark-charcoal);
+  z-index: 6000;
+  transition: left 0.3s ease;
+  overflow-y: auto;
+}
+
+.menu-panel.active {
+  left: 0;
+}
+
+.menu-panel-content {
+  padding: 2rem 0;
+}
+
+.menu-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--pure-white);
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  transition: var(--transition);
+}
+
+.menu-close:hover {
+  color: var(--primary-green);
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 3rem 0 0 0;
+}
+
+.menu-item {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.menu-link {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.25rem 2rem;
+  color: var(--pure-white);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  letter-spacing: 0.05em;
+  transition: var(--transition);
+}
+
+.menu-link i {
+  font-size: 1.5rem;
+  color: var(--primary-green);
+}
+
+.menu-link:hover {
+  background-color: rgba(78, 157, 109, 0.1);
+  padding-left: 2.5rem;
+}
+
+.menu-link.active {
+  background-color: rgba(78, 157, 109, 0.15);
+  border-left: 4px solid var(--primary-green);
+  font-weight: 600;
+}
+
+/* Menu Overlay */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 5500;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Scrolled State */
+.axter-nav.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.axter-nav.scrolled .nav-container {
+  padding: 0.75rem 2rem;
+}
+
+.axter-nav.scrolled .logo-img {
+  height: 42px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+  .nav-container {
+    padding: 1rem 1.5rem;
+  }
+
+  .menu-panel {
+    width: 280px;
+  }
+
+  .navbar-brand {
+    position: static;
+    transform: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-container {
+    padding: 0.875rem 1rem;
+  }
+
+  .logo-img {
+    height: 30px;
+  }
+
+  .menu-panel {
+    width: 100%;
+  }
+}

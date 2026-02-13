@@ -1,0 +1,376 @@
+/* ===========================
+   RESPONSIVE STYLES - MOBILE FIRST
+   =========================== */
+
+/* Large Tablets & Small Desktops (1200px and below) */
+@media (max-width: 1200px) {
+    footer .boxes {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    footer .box {
+        flex: 0 0 calc(50% - 2rem);
+        min-width: 300px;
+    }
+
+    .hero-section {
+        padding: 8rem 0 6rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+}
+
+/* Tablets (1092px and below) */
+@media (max-width: 1092px) {
+    .photo {
+        background: url(/img/etancheite_toit_plat.jpg);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 26rem;
+        padding: 2rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .transparant {
+        width: 90%;
+        padding: 1.5rem;
+    }
+
+    .transparant h1 {
+        font-size: 2rem;
+    }
+
+    .main .block {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .block1 .carousel {
+        width: 100%;
+        height: 300px;
+        margin: 0 auto;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    #FAQ h4 {
+        font-size: 2rem;
+    }
+
+    #FAQ p {
+        font-size: 1.1rem;
+        line-height: 1.6;
+    }
+
+    #FAQ a {
+        font-size: 1rem;
+        padding: 0.5rem 0;
+        display: inline-block;
+    }
+
+    footer {
+        font-size: 1rem;
+        padding: 3rem 2rem;
+    }
+
+    footer .boxes p {
+        padding: 0;
+        margin-bottom: 0.5rem;
+        line-height: 1.5;
+    }
+
+    /* Service Cards */
+    .service-block {
+        margin-bottom: 3rem;
+    }
+
+    .carousel-item img {
+        height: 350px;
+    }
+}
+
+/* Small Tablets (1000px and below) */
+@media (max-width: 1000px) {
+    nav {
+        padding: 1rem;
+    }
+
+    nav .navbar-brand {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: var(--primary-orange);
+        margin-right: 0;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    nav ul a {
+        margin-right: 0;
+        padding: 0.5rem;
+        font-size: 0.9rem;
+    }
+
+    .hero-section {
+        padding: 7rem 0 5rem;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+}
+
+/* Mobile Landscape & Small Tablets (768px and below) */
+@media (max-width: 768px) {
+    .photo {
+        height: 22rem;
+        padding-top: 1rem;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+
+    .transparant {
+        padding: 1rem;
+    }
+
+    .main h2 {
+        font-size: 1.8rem;
+    }
+
+    .block1 .carousel {
+        height: 250px;
+    }
+
+    footer .boxes {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    footer .box {
+        flex: 1;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav .navbar-toggler {
+        margin-left: auto;
+    }
+
+    /* Hero Section Mobile */
+    .hero-section {
+        padding: 6rem 1rem 4rem;
+    }
+
+    .hero-title {
+        font-size: 1.9rem;
+        line-height: 1.2;
+        margin-bottom: 1rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-cta {
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 300px;
+        padding: 14px 24px;
+    }
+
+    /* Service Cards Mobile */
+    .service-section {
+        padding: 3rem 0;
+    }
+
+    .service-block {
+        margin-bottom: 2.5rem;
+    }
+
+    .service-title {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+
+    .service-description {
+        padding: 2rem 1.5rem;
+    }
+
+    .service-description p {
+        font-size: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .btn-primary {
+        width: 100%;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    /* FAQ Section Mobile */
+    .faq-section {
+        padding: 3rem 0;
+    }
+
+    .faq-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+
+    .accordion-button {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+
+    .accordion-body {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+}
+
+/* Mobile Portrait (576px and below) */
+@media (max-width: 576px) {
+    .photo {
+        height: 20rem;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .transparant {
+        width: 95%;
+    }
+
+    .main li,
+    #FAQ li {
+        padding-left: 1.5rem;
+        font-size: 1rem;
+    }
+
+    .block1 .carousel {
+        height: 200px;
+    }
+
+    footer {
+        padding: 2rem 1.5rem;
+    }
+
+    nav .navbar-brand {
+        font-size: 1.5rem;
+    }
+
+    nav ul a {
+        font-size: 0.8rem;
+    }
+
+    /* Hero Section Small Mobile */
+    .hero-section {
+        padding: 5rem 1rem 3rem;
+    }
+
+    .hero-title {
+        font-size: 1.6rem;
+        letter-spacing: 0.5px;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .cta-button {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Service Cards Small Mobile */
+    .service-title {
+        font-size: 1.3rem;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .service-description {
+        padding: 1.5rem 1rem;
+    }
+
+    .service-description p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+    }
+
+    .btn-primary {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    /* FAQ Small Mobile */
+    .faq-title {
+        font-size: 1.5rem;
+    }
+
+    .accordion-button {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+
+    .accordion-body {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+}
+
+/* Extra Small Mobile (400px and below) */
+@media (max-width: 400px) {
+    .hero-title {
+        font-size: 1.4rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.9rem;
+    }
+
+    .service-title {
+        font-size: 1.2rem;
+    }
+
+    .carousel-item img {
+        height: 220px;
+    }
+
+    .navbar-brand img {
+        height: 35px;
+    }
+
+    footer {
+        padding: 1.5rem 1rem;
+    }
+}

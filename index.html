@@ -1,194 +1,43 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PMAP - Experts en étanchéité de terrasses, piscines, ponts et chéneaux. Solutions durables et professionnelles pour vos projets.">
-    <meta name="keywords" content="étanchéité, terrasses, piscines, ponts, chéneaux, PMAP, travaux étanchéité, rénovation">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/hero.css">
-    <link rel="stylesheet" href="/style/responsive-style.css">
-    <link rel="icon" href="/img/logo.jpg" type="image/jpg">
-    <title>PMAP - Experts en Étanchéité | Terrasses, Piscines, Ponts</title>
-    <style>
-        :root {
-            --primary-color: #3498db;
-            --secondary-color: #2c3e50;
-            --light-color: #f8f9fa;
-            --dark-color: #343a40;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-        
-        .hero-section {
-            background: url('/img/bg1.png');
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: cover;
-        }
-        
-       .hero-section h1 {
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
 
-        .hero-head{
-             /*background-color: #e78020; 
-             border-radius: 1rem;
-                /*padding: 3rem;*/
-    border-radius: 12px;
-    max-width: 800px;
-    margin: 0 auto;
-    backdrop-filter: blur(3px);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-    transform: translateY(0);
-    transition: var(--transition);
-    animation: float 6s ease-in-out infinite;
-        }
-        .hero-head p{
-            color: #e78020;
-        }
-        
-       /* .hero-section .lead {
-            font-size: 1.25rem;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        
-        .intro-text {
-            background-color: var(--light-color);
-            padding: 3rem 0;
-        }
-        
-        .intro-text p {
-            max-width: 900px;
-            margin: 0 auto;
-            font-size: 1.1rem;
-            line-height: 1.8;
-        } */
-        
-        .service-section {
-            padding: 4rem 0;
-        }
-        
-        .service-title {
-            color: var(--secondary-color);
-            font-weight: 600;
-            margin-bottom: 2rem;
-            padding-bottom: 0.5rem;
-            border-bottom: 3px solid var(--primary-color);
-            display: inline-block;
-        }
-        
-        .service-block {
-            margin-bottom: 4rem;
-            background: white;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .carousel-item img {
-            height: 400px;
-            object-fit: cover;
-        }
-        
-        .service-description {
-            padding: 2rem;
-        }
-        
-        .service-description p {
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
-            line-height: 1.8;
-        }
-        
-        .btn-primary {
-            background-color: var(--primary-color);
-            border-color: var(--primary-color);
-            padding: 0.5rem 1.5rem;
-            font-weight: 500;
-        }
-        
-        .btn-primary:hover {
-            background-color: #2980b9;
-            border-color: #2980b9;
-        }
-        
-        .faq-section {
-            background-color: var(--light-color);
-            padding: 4rem 0;
-        }
-        
-        .faq-title {
-            color: var(--secondary-color);
-            margin-bottom: 2rem;
-            text-align: center;
-        }
-        
-        .accordion-button:not(.collapsed) {
-            background-color: rgba(52, 152, 219, 0.1);
-            color: var(--primary-color);
-        }
-        
-        .accordion-button:focus {
-            box-shadow: none;
-            border-color: rgba(52, 152, 219, 0.25);
-        }
-        
-        @media (max-width: 768px) {
-            .hero-section {
-                padding: 5rem 0;
-            }
-            
-            .hero-section h1 {
-                font-size: 2rem;
-            }
-            
-            .carousel-item img {
-                height: 300px;
-            }
-            
-            .service-description {
-                padding: 1.5rem;
-            }
-        }
-    </style>
+<head>
+    {{> head}}
+    <link rel="stylesheet" href="/src/style/index.css">
+    <title>PMAP - Experts en Étanchéité | Terrasses, Piscines, Ponts</title>
 </head>
+
 <body>
-    <div id="nav-placeholder"></div>
+    {{> nav}}
 
     <header>
         <section class="hero-section">
             <div class="container">
                 <div class="hero-content">
                     <div class="hero-head bg-gradient-primary">
-                        <h1 class="hero-title">CONFIEZ VOS TRAVAUX D'ÉTANCHÉITÉ À DES EXPERTS</h1>
-                        <p class="hero-subtitle">Solutions durables et professionnelles pour tous vos projets</p>
+                        <h1 class="hero-title" data-i18n="hero-title">CONFIEZ VOS TRAVAUX D'ÉTANCHÉITÉ À DES EXPERTS
+                        </h1>
+                        <p class="hero-subtitle" data-i18n="hero-subtitle">Solutions durables et professionnelles pour
+                            tous vos projets</p>
                     </div>
                     <div class="hero-cta">
-                        <a href="Contact.html" class="cta-button">Demander un devis</a>
-                        <a href="Service.html" class="cta-button secondary">Nos solutions</a>
+                        <a href="Contact.html" class="cta-button" data-i18n="hero-cta-quote">Demander un devis</a>
+                        <a href="Service.html" class="cta-button secondary" data-i18n="hero-cta-solutions">Nos
+                            solutions</a>
                     </div>
                 </div>
             </div>
         </section>
-        
+
         <section class="intro-text">
             <div class="container">
                 <div class="intro-card">
-                    <svg class="intro-icon" viewBox="0 0 24 24">
-                        <path fill="currentColor" d="M12,3L2,12H5V20H19V12H22L12,3M12,8.75A2.25,2.25 0 0,1 14.25,11A2.25,2.25 0 0,1 12,13.25A2.25,2.25 0 0,1 9.75,11A2.25,2.25 0 0,1 12,8.75M12,15C13.5,15 16.5,15.75 16.5,17.25V18H7.5V17.25C7.5,15.75 10.5,15 12,15Z" />
-                    </svg>
-                    <p class="intro-paragraph">L'étanchéité est un élément clé dans la construction et la rénovation, protégeant les structures contre les infiltrations d'eau et autres éléments extérieurs. Essentielle pour garantir la durabilité des matériaux et maintenir un environnement intérieur sain, une bonne étanchéité prévient les problèmes d'humidité tout en optimisant l'efficacité énergétique des bâtiments.</p>
+                    <p class="intro-paragraph" data-i18n="intro-text">L'étanchéité est un élément clé dans la
+                        construction et la rénovation,
+                        protégeant les structures contre les infiltrations d'eau et autres éléments extérieurs.
+                        Essentielle pour garantir la durabilité des matériaux et maintenir un environnement intérieur
+                        sain, une bonne étanchéité prévient les problèmes d'humidité tout en optimisant l'efficacité
+                        énergétique des bâtiments.</p>
                 </div>
             </div>
         </section>
@@ -196,19 +45,22 @@
 
     <main class="container service-section">
         <!-- Étanchéité Terrasse -->
-        <article class="service-block">
-            <h2 class="service-title"><i class='bx bx-home-alt me-2'></i>ÉTANCHÉITÉ DE TERRASSE</h2>
+        <article class="service-block" data-aos="fade-up">
+            <h2 class="service-title"><i class='bx bx-home-alt me-2'></i><span data-i18n="service-terrasse">ÉTANCHÉITÉ
+                    DE TERRASSE</span></h2>
             <div class="row g-0">
                 <div class="col-lg-8">
                     <div id="terrasseCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#terrasseCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#terrasseCarousel" data-bs-slide-to="0"
+                                class="active"></button>
                             <button type="button" data-bs-target="#terrasseCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#terrasseCarousel" data-bs-slide-to="2"></button>
                         </div>
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="/img/terasse1.jpg" class="d-block w-100" alt="Travaux d'étanchéité de terrasse">
+                                <img src="/img/terasse1.jpg" class="d-block w-100"
+                                    alt="Travaux d'étanchéité de terrasse">
                             </div>
                             <div class="carousel-item">
                                 <img src="/img/terasse5.jpg" class="d-block w-100" alt="Exemple de terrasse étanche">
@@ -222,34 +74,43 @@
                             <div class="carousel-item">
                                 <img src="/img/terasse_2.jpeg" class="d-block w-100" alt="Exemple de terrasse étanche">
                             </div>
-                            
-                            
+
+
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#terrasseCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#terrasseCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#terrasseCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#terrasseCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-4 service-description">
-                    <p>L'étanchéité d'une terrasse est essentielle pour prévenir les infiltrations d'eau, surtout si elle est située au-dessus d'une pièce habitable. Elle protège la structure contre le gel, les UV et les variations climatiques, prolongeant ainsi sa durée de vie.</p>
-                    <p>Nous utilisons des matériaux de haute qualité et des techniques éprouvées pour garantir une étanchéité parfaite et durable.</p>
-                    <a href="Contact.html" class="btn btn-primary">Demander un devis</a>
+                    <p data-i18n="desc-terrasse-1">L'étanchéité d'une terrasse est essentielle pour prévenir les
+                        infiltrations d'eau, surtout si
+                        elle est située au-dessus d'une pièce habitable. Elle protège la structure contre le gel, les UV
+                        et les variations climatiques, prolongeant ainsi sa durée de vie.</p>
+                    <p data-i18n="desc-terrasse-2">Nous utilisons des matériaux de haute qualité et des techniques
+                        éprouvées pour garantir une
+                        étanchéité parfaite et durable.</p>
+                    <a href="Contact.html" class="btn btn-primary" data-i18n="btn-quote">Demander un devis</a>
                 </div>
             </div>
         </article>
-        
+
         <!-- Étanchéité Ponts et Échangeurs -->
-        <article class="service-block">
-           
-            <h2 class="service-title"><i class='bx bx-building'></i>ÉTANCHÉITÉ PONTS ET ÉCHANGEURS</h2>
+        <article class="service-block" data-aos="fade-up" data-aos-delay="100">
+
+            <h2 class="service-title"><i class='bx bx-building'></i><span data-i18n="service-ponts">ÉTANCHÉITÉ PONTS ET
+                    ÉCHANGEURS</span></h2>
             <div class="row g-0">
                 <div class="col-lg-8">
                     <div id="pontsCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#pontsCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#pontsCarousel" data-bs-slide-to="0"
+                                class="active"></button>
                             <button type="button" data-bs-target="#pontsCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#pontsCarousel" data-bs-slide-to="2"></button>
                         </div>
@@ -264,30 +125,39 @@
                                 <img src="/img/pond3.png" class="d-block w-100" alt="Rénovation de pont">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#pontsCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#pontsCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#pontsCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#pontsCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-4 service-description">
-                    <p>L'étanchéité des ponts et échangeurs est cruciale pour leur durabilité et sécurité. Elle empêche l'infiltration d'eau et la corrosion des armatures, préservant ainsi l'intégrité structurelle.</p>
-                    <p>Nos solutions techniques adaptées résistent aux contraintes mécaniques et climatiques les plus sévères.</p>
-                    <a href="Contact.html" class="btn btn-primary">Demander un devis</a>
+                    <p data-i18n="desc-ponts-1">L'étanchéité des ponts et échangeurs est cruciale pour leur durabilité
+                        et sécurité. Elle empêche
+                        l'infiltration d'eau et la corrosion des armatures, préservant ainsi l'intégrité structurelle.
+                    </p>
+                    <p data-i18n="desc-ponts-2">Nos solutions techniques adaptées résistent aux contraintes mécaniques
+                        et climatiques les plus
+                        sévères.</p>
+                    <a href="Contact.html" class="btn btn-primary" data-i18n="btn-quote">Demander un devis</a>
                 </div>
             </div>
         </article>
-        
+
         <!-- Étanchéité Chéneaux -->
-        <article class="service-block">
-            <h2 class="service-title"><i class='bx bx-water me-2'></i>ÉTANCHÉITÉ DES CHÉNEAUX</h2>
+        <article class="service-block" data-aos="fade-up">
+            <h2 class="service-title"><i class='bx bx-water me-2'></i><span data-i18n="service-chenaux">ÉTANCHÉITÉ DES
+                    CHÉNEAUX</span></h2>
             <div class="row g-0">
                 <div class="col-lg-8">
                     <div id="chenauxCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#chenauxCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#chenauxCarousel" data-bs-slide-to="0"
+                                class="active"></button>
                             <button type="button" data-bs-target="#chenauxCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#chenauxCarousel" data-bs-slide-to="2"></button>
                         </div>
@@ -302,30 +172,38 @@
                                 <img src="/img/chenaux4.jpg" class="d-block w-100" alt="Rénovation de chéneau">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#chenauxCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#chenauxCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#chenauxCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#chenauxCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-4 service-description">
-                    <p>L'étanchéité des chéneaux est essentielle pour protéger le bâtiment contre les infiltrations d'eau. Un chéneau mal étanché peut causer des dégâts importants aux murs et aux fondations.</p>
-                    <p>Nous proposons des solutions durables avec des matériaux adaptés comme les membranes EPDM ou les résines polyuréthane.</p>
-                    <a href="Contact.html" class="btn btn-primary">Demander un devis</a>
+                    <p data-i18n="desc-chenaux-1">L'étanchéité des chéneaux est essentielle pour protéger le bâtiment
+                        contre les infiltrations
+                        d'eau. Un chéneau mal étanché peut causer des dégâts importants aux murs et aux fondations.</p>
+                    <p data-i18n="desc-chenaux-2">Nous proposons des solutions durables avec des matériaux adaptés comme
+                        les membranes EPDM ou les
+                        résines polyuréthane.</p>
+                    <a href="Contact.html" class="btn btn-primary" data-i18n="btn-quote">Demander un devis</a>
                 </div>
             </div>
         </article>
-        
+
         <!-- Étanchéité Piscine -->
-        <article class="service-block">
-            <h2 class="service-title"><i class='bx bx-swim me-2'></i>ÉTANCHÉITÉ DE PISCINE</h2>
+        <article class="service-block" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="service-title"><i class='bx bx-swim me-2'></i><span data-i18n="service-piscine">ÉTANCHÉITÉ DE
+                    PISCINE</span></h2>
             <div class="row g-0">
                 <div class="col-lg-8">
                     <div id="piscineCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="0"
+                                class="active"></button>
                             <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="2"></button>
                             <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="3"></button>
@@ -344,28 +222,36 @@
                                 <img src="/img/piscine23.jpg" class="d-block w-100" alt="Rénovation piscine">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#piscineCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#piscineCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#piscineCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#piscineCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-4 service-description">
-                    <p>L'étanchéité d'une piscine est cruciale pour sa durabilité et son bon fonctionnement. Elle prévient les fuites et protège la structure contre les dommages liés à l'eau.</p>
-                    <p>Nos solutions techniques garantissent une étanchéité parfaite, qu'il s'agisse de piscines neuves ou à rénover.</p>
-                    <a href="Contact.html" class="btn btn-primary">Demander un devis</a>
+                    <p data-i18n="desc-piscine-1">L'étanchéité d'une piscine est cruciale pour sa durabilité et son bon
+                        fonctionnement. Elle
+                        prévient les fuites et protège la structure contre les dommages liés à l'eau.</p>
+                    <p data-i18n="desc-piscine-2">Nos solutions techniques garantissent une étanchéité parfaite, qu'il
+                        s'agisse de piscines neuves
+                        ou à rénover.</p>
+                    <a href="Contact.html" class="btn btn-primary" data-i18n="btn-quote">Demander un devis</a>
                 </div>
             </div>
         </article>
-        <article class="service-block">
-            <h2 class="service-title"><i class='bx bx-car'></i> CONVOYAGE</h2>
+        <article class="service-block" data-aos="fade-up">
+            <h2 class="service-title"><i class='bx bx-car'></i> <span
+                    data-i18n="service-convoyage"></span>CONVOYAGE</span></h2>
             <div class="row g-0">
                 <div class="col-lg-8">
                     <div id="piscineCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="0"
+                                class="active"></button>
                             <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="2"></button>
                             <button type="button" data-bs-target="#piscineCarousel" data-bs-slide-to="3"></button>
@@ -389,31 +275,40 @@
                                 <img src="/img/CONVOYAGE20.jpg" class="d-block w-100" alt="Rénovation piscine">
                             </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#piscineCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#piscineCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#piscineCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#piscineCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-4 service-description">
-                    <p>Notre service de convoyage de véhicules est conçu pour offrir une solution simple, rapide et fiable pour le transport de vos automobiles, qu'il s'agisse de particuliers ou de professionnels. Que vous ayez besoin de déplacer un véhicule entre deux sites ou 
+                    <p data-i18n="desc-convoyage-1">Notre service de convoyage de véhicules est conçu pour offrir une
+                        solution simple, rapide et
+                        fiable pour le transport de vos automobiles, qu'il s'agisse de particuliers ou de
+                        professionnels. Que vous ayez besoin de déplacer un véhicule entre deux sites ou
                         de faire livrer une voiture achetée à distance, nous sommes là pour répondre à vos besoins.</p>
-                    <p><b>Nos Services :</b> convoyage National, convoyage International, transport de Véhicules de Luxe et Suivi en Temps Réel.</p>
-                    <a href="Contact.html" class="btn btn-primary">Demander un devis</a>
+                    <p><b data-i18n="desc-convoyage-2">Nos Services :</b> convoyage National, convoyage International,
+                        transport de Véhicules de Luxe
+                        et Suivi en Temps Réel.</p>
+                    <a href="Contact.html" class="btn btn-primary" data-i18n="btn-quote">Demander un devis</a>
                 </div>
             </div>
         </article>
-        
+
         <!-- Entretien -->
-        <article class="service-block">
-            <h2 class="service-title"><i class='bx bx-calendar-check me-2'></i>ENTRETIEN ÉTANCHÉITÉ ET PISCINE</h2>
+        <article class="service-block" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="service-title"><i class='bx bx-calendar-check me-2'></i><span
+                    data-i18n="service-entretien">ENTRETIEN ÉTANCHÉITÉ ET PISCINE</span></h2>
             <div class="row g-0">
                 <div class="col-lg-8">
                     <div id="entretienCarousel" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#entretienCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#entretienCarousel" data-bs-slide-to="0"
+                                class="active"></button>
                             <button type="button" data-bs-target="#entretienCarousel" data-bs-slide-to="1"></button>
                             <button type="button" data-bs-target="#entretienCarousel" data-bs-slide-to="2"></button>
                         </div>
@@ -424,7 +319,7 @@
                             <div class="carousel-item">
                                 <img src="/img/piscine_j2.jpg" class="d-block w-100" alt="Inspection professionnelle">
                             </div>
-                            
+
                             <div class="carousel-item">
                                 <img src="/img/piscine_j3.jpg" class="d-block w-100" alt="Nettoyage piscine">
                             </div>
@@ -434,85 +329,114 @@
                             </div>
 
                             <div class="carousel-item">
-                                <img src="/img/piscine_j5.jpg" class="d-block w-100" alt="Nettoyage piscine">
+                                <img src="/img/piscine_j5.jpeg" class="d-block w-100" alt="Nettoyage piscine">
                             </div>
-                            
+
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#entretienCarousel" data-bs-slide="prev">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#entretienCarousel"
+                            data-bs-slide="prev">
                             <span class="carousel-control-prev-icon"></span>
                         </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#entretienCarousel" data-bs-slide="next">
+                        <button class="carousel-control-next" type="button" data-bs-target="#entretienCarousel"
+                            data-bs-slide="next">
                             <span class="carousel-control-next-icon"></span>
                         </button>
                     </div>
                 </div>
                 <div class="col-lg-4 service-description">
-                    <p>Un entretien régulier est essentiel pour maintenir l'efficacité des systèmes d'étanchéité et garantir la qualité de l'eau des piscines.</p>
-                    <p>Nos services d'entretien comprennent :</p>
+                    <p data-i18n="desc-entretien-1">Un entretien régulier est essentiel pour maintenir l'efficacité des
+                        systèmes d'étanchéité et
+                        garantir la qualité de l'eau des piscines.</p>
+                    <p data-i18n="desc-entretien-2">Nos services d'entretien comprennent :</p>
                     <ul>
-                        <li>Inspection des systèmes d'étanchéité</li>
-                        <li>Nettoyage et traitement des piscines</li>
-                        <li>Réparation des petites détériorations</li>
-                        <li>Conseils personnalisés</li>
+                        <li data-i18n="li-entretien-1">Inspection des systèmes d'étanchéité</li>
+                        <li data-i18n="li-entretien-2">Nettoyage et traitement des piscines</li>
+                        <li data-i18n="li-entretien-3">Réparation des petites détériorations</li>
+                        <li data-i18n="li-entretien-4">Conseils personnalisés</li>
                     </ul>
-                    <a href="Contact.html" class="btn btn-primary">Programmer un entretien</a>
+                    <a href="Contact.html" class="btn btn-primary" data-i18n="btn-maintenance">Programmer un
+                        entretien</a>
                 </div>
             </div>
         </article>
-        
+
         <!-- FAQ Section -->
-        <section class="faq-section mt-5">
+        <section class="faq-section mt-5" data-aos="fade-in">
             <div class="container">
-                <h2 class="faq-title">FOIRE AUX QUESTIONS</h2>
+                <h2 class="faq-title" data-i18n="faq-title">FOIRE AUX QUESTIONS</h2>
                 <div class="accordion" id="faqAccordion">
-                    <div class="accordion-item">
+                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
                         <h3 class="accordion-header">
-                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1" aria-expanded="true">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq1" aria-expanded="true" data-i18n="faq-q1">
                                 Quels sont les signes d'une étanchéité défaillante ?
                             </button>
                         </h3>
                         <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Les signes incluent des taches d'humidité, des moisissures, des cloques sur les revêtements, ou des fuites visibles après la pluie.
+                            <div class="accordion-body" data-i18n="faq-a1">
+                                Les signes incluent des taches d'humidité, des moisissures, des cloques sur les
+                                revêtements, ou des fuites visibles après la pluie.
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
                         <h3 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq2" data-i18n="faq-q2">
                                 Quelle est la durée de vie d'une étanchéité ?
                             </button>
                         </h3>
                         <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Elle varie selon les matériaux (10 à 30 ans), mais un entretien régulier peut prolonger considérablement cette durée.
+                            <div class="accordion-body" data-i18n="faq-a2">
+                                Elle varie selon les matériaux (10 à 30 ans), mais un entretien régulier peut prolonger
+                                considérablement cette durée.
                             </div>
                         </div>
                     </div>
-                    <div class="accordion-item">
+                    <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
                         <h3 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#faq3" data-i18n="faq-q3">
                                 Quand faut-il rénover l'étanchéité d'une piscine ?
                             </button>
                         </h3>
                         <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
-                            <div class="accordion-body">
-                                Lorsque vous observez des fissures, des décollements ou une perte importante d'eau non expliquée par l'évaporation.
+                            <div class="accordion-body" data-i18n="faq-a3">
+                                Lorsque vous observez des fissures, des décollements ou une perte importante d'eau non
+                                expliquée par l'évaporation.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="text-center mt-4">
-                    <a href="FAQ.html" class="btn btn-outline-primary">Voir toutes les questions</a>
+                <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="400">
+                    <a href="FAQ.html" class="btn btn-outline-primary" data-i18n="btn-all-questions">Voir toutes les
+                        questions</a>
                 </div>
             </div>
         </section>
     </main>
 
-    <div id="footer-placeholder"></div>
+    {{> footer}}
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="/js/include.js"></script>
-    
 </body>
+<!-- PocketFlow Chatbot - Start -->
+<script>
+(function() {
+    var script = document.createElement("script");
+    script.src = "https://askthispage.com/embed/chatbot.js";
+    script.onload = function() {
+        initializeChatbot({
+            extra_urls: ["https://pma-sarl.vercel.app/"],
+            prefixes: [],
+            chatbotName: 'Intelligence PMAP',
+            wsUrl: 'wss://askthispage.com/api/ws/chat',
+            instruction: 'your role is to help to the best you can answer user\x27s question in the language in which the questions is asked by scrapping the available data on the provided links',
+            isOpen: false
+        });
+    };
+    document.head.appendChild(script);
+})();
+</script>
+<!-- PocketFlow Chatbot - End -->
+
 </html>

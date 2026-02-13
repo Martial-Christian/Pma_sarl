@@ -1,0 +1,199 @@
+/* Axter-Inspired Index Page Styles */
+
+/* Service Section */
+.service-section {
+    padding: var(--spacing-xl) 0;
+    background-color: var(--light-gray-bg);
+}
+
+.service-title {
+    color: var(--dark-charcoal);
+    font-weight: 700;
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 2.5rem;
+    letter-spacing: 0.02em;
+}
+
+/* Service Cards - Axter Style with Image Overlays */
+.service-block {
+    margin-bottom: 3rem;
+    background: var(--white);
+    border-radius: 0;
+    overflow: hidden;
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    border: none;
+    position: relative;
+}
+
+.service-block:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--box-shadow-hover);
+}
+
+/* Service Image with Overlay */
+.service-block .carousel,
+.service-block img {
+    position: relative;
+}
+
+.service-block::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, transparent 50%, rgba(44, 46, 53, 0.7) 100%);
+    pointer-events: none;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.service-block:hover::after {
+    opacity: 1;
+}
+
+.carousel-item img {
+    height: 350px;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Service Description */
+.service-description {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--white);
+}
+
+.service-description h3 {
+    color: var(--dark-charcoal);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.service-description p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--charcoal-text);
+}
+
+/* Button with Arrow Icon */
+.btn-primary {
+    background: var(--primary-green);
+    border: none;
+    padding: 0.875rem 2rem;
+    font-weight: 600;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: var(--transition);
+    box-shadow: none;
+    font-size: 0.875rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary::after {
+    content: '→';
+    font-size: 1.2rem;
+    transition: var(--transition);
+}
+
+.btn-primary:hover {
+    background: #3d8558;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(78, 157, 109, 0.25);
+}
+
+.btn-primary:hover::after {
+    transform: translateX(4px);
+}
+
+/* FAQ Section */
+.faq-section {
+    background-color: var(--white);
+    padding: var(--spacing-xl) 0;
+}
+
+.faq-title {
+    color: var(--dark-charcoal);
+    margin-bottom: 3rem;
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.accordion-item {
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    margin-bottom: 0.5rem;
+    border-radius: 0 !important;
+    overflow: hidden;
+    box-shadow: none;
+}
+
+.accordion-button {
+    font-weight: 600;
+    color: var(--dark-charcoal);
+    background-color: var(--white);
+    font-size: 1.05rem;
+    padding: 1.25rem 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+    background-color: var(--light-gray-bg);
+    color: var(--primary-green);
+    box-shadow: none;
+}
+
+.accordion-button:focus {
+    box-shadow: none;
+    border-color: var(--primary-green);
+}
+
+.accordion-body {
+    padding: 1.5rem;
+    color: var(--charcoal-text);
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+
+    .service-title,
+    .faq-title {
+        font-size: 2rem;
+    }
+
+    .carousel-item img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .service-section,
+    .faq-section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    .service-description {
+        padding: 1.5rem;
+    }
+
+    .carousel-item img {
+        height: 250px;
+    }
+
+    .service-title,
+    .faq-title {
+        font-size: 1.75rem;
+    }
+}

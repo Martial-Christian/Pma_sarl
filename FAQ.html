@@ -1,21 +1,17 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="PMAP - Foire aux questions sur la prévention et réparation des fuites d'eau">
-    <link rel="stylesheet" href="/style/style.css">
-    <link rel="stylesheet" href="/style/faq.css">
-    <link rel="stylesheet" href="/style/responsive-style.css">
-    <link rel="stylesheet" href="/style/partners_carousel.css">
-    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    {{> head}}
+    <link rel="stylesheet" href="/src/style/faq.css">
+    <link rel="stylesheet" href="/src/style/partners_carousel.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <title>PMAP - Foire Aux Questions | Prévention des Fuites d'Eau</title>
 </head>
+
 <body>
     <!-- Navigation améliorée -->
-    <div id="nav-placeholder"></div>
+    {{> nav}}
 
     <!-- Hero Section FAQ -->
     <section id="FAQ">
@@ -23,11 +19,14 @@
             <div class="container py-5">
                 <div class="row align-items-center">
                     <div class="col-lg-8 mx-auto text-center">
-                        <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Foire Aux Questions</h1>
-                        <p class="lead mb-4 animate__animated animate__fadeInUp">Trouvez des réponses à vos questions sur la prévention et la réparation des fuites d'eau</p>
+                        <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Foire Aux Questions
+                        </h1>
+                        <p class="lead mb-4 animate__animated animate__fadeInUp">Trouvez des réponses à vos questions
+                            sur la prévention et la réparation des fuites d'eau</p>
                         <div class="search-bar animate__animated animate__fadeInUp animate__delay-1s">
                             <div class="input-group mb-3 mx-auto" style="max-width: 500px;">
-                                <input type="text" class="form-control form-control-lg" placeholder="Rechercher une question..." aria-label="Rechercher">
+                                <input type="text" class="form-control form-control-lg"
+                                    placeholder="Rechercher une question..." aria-label="Rechercher">
                                 <button class="btn btn-light" type="button">
                                     <i class='bx bx-search'></i>
                                 </button>
@@ -67,7 +66,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-lg-9">
                     <!-- Généralités -->
                     <div id="generales" class="faq-section mb-5">
@@ -75,18 +74,22 @@
                             <i class='bx bx-help-circle fs-1 text-primary me-3'></i>
                             <h2 class="mb-0">Généralités</h2>
                         </div>
-                        
+
                         <div class="accordion" id="accordionGenerales">
                             <!-- Question 1 -->
                             <div class="accordion-item border-0 shadow-sm mb-3">
                                 <h3 class="accordion-header" id="headingOne">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseOne">
                                         Qu'est-ce que l'étancheité quel est son rôle ?
                                     </button>
                                 </h3>
-                                <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionGenerales">
+                                <div id="collapseOne" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionGenerales">
                                     <div class="accordion-body">
-                                        <p>Le Programme de Prévention des Fuites d'Eau (PMAP) est une initiative visant à identifier, prévenir et réparer les fuites d'eau dans les infrastructures résidentielles et commerciales. Notre rôle inclut :</p>
+                                        <p>Le Programme de Prévention des Fuites d'Eau (PMAP) est une initiative visant
+                                            à identifier, prévenir et réparer les fuites d'eau dans les infrastructures
+                                            résidentielles et commerciales. Notre rôle inclut :</p>
                                         <ul>
                                             <li>Diagnostic précis des fuites</li>
                                             <li>Réparations durables</li>
@@ -96,15 +99,17 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Question 2 -->
                             <div class="accordion-item border-0 shadow-sm mb-3">
                                 <h3 class="accordion-header" id="headingTwo">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseTwo">
                                         Comment savoir si j'ai une fuite d'eau cachée ?
                                     </button>
                                 </h3>
-                                <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionGenerales">
+                                <div id="collapseTwo" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionGenerales">
                                     <div class="accordion-body">
                                         <p>Plusieurs signes peuvent indiquer une fuite cachée :</p>
                                         <div class="row">
@@ -123,19 +128,23 @@
                                                 </ul>
                                             </div>
                                         </div>
-                                        <p class="mt-3"><strong>Conseil :</strong> Effectuez un test simple en relevant votre compteur d'eau le soir et le matin sans utiliser d'eau entre-temps.</p>
+                                        <p class="mt-3"><strong>Conseil :</strong> Effectuez un test simple en relevant
+                                            votre compteur d'eau le soir et le matin sans utiliser d'eau entre-temps.
+                                        </p>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Question 3 -->
                             <div class="accordion-item border-0 shadow-sm mb-3">
                                 <h3 class="accordion-header" id="headingThree">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseThree">
                                         Quelles sont les zones les plus susceptibles aux fuites ?
                                     </button>
                                 </h3>
-                                <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionGenerales">
+                                <div id="collapseThree" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionGenerales">
                                     <div class="accordion-body">
                                         <div class="table-responsive">
                                             <table class="table">
@@ -175,29 +184,33 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Causes des fuites -->
                     <div id="causes" class="faq-section mb-5">
                         <div class="d-flex align-items-center mb-4">
                             <i class='bx bx-question-mark fs-1 text-primary me-3'></i>
                             <h2 class="mb-0">Causes des fuites</h2>
                         </div>
-                        
+
                         <div class="accordion" id="accordionCauses">
                             <!-- Question 1 -->
                             <div class="accordion-item border-0 shadow-sm mb-3">
                                 <h3 class="accordion-header" id="headingFour">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFour">
                                         Quelles sont les principales causes des fuites d'eau ?
                                     </button>
                                 </h3>
-                                <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionCauses">
+                                <div id="collapseFour" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionCauses">
                                     <div class="accordion-body">
                                         <div class="row">
                                             <div class="col-md-6 mb-3">
                                                 <div class="card h-100 border-0 shadow-sm">
                                                     <div class="card-body">
-                                                        <h5 class="card-title text-danger"><i class='bx bx-error-circle me-2'></i> Causes mécaniques</h5>
+                                                        <h5 class="card-title text-danger"><i
+                                                                class='bx bx-error-circle me-2'></i> Causes mécaniques
+                                                        </h5>
                                                         <ul>
                                                             <li>Usure des joints et raccords</li>
                                                             <li>Corrosion des tuyaux</li>
@@ -210,7 +223,9 @@
                                             <div class="col-md-6 mb-3">
                                                 <div class="card h-100 border-0 shadow-sm">
                                                     <div class="card-body">
-                                                        <h5 class="card-title text-danger"><i class='bx bx-error-circle me-2'></i> Causes environnementales</h5>
+                                                        <h5 class="card-title text-danger"><i
+                                                                class='bx bx-error-circle me-2'></i> Causes
+                                                            environnementales</h5>
                                                         <ul>
                                                             <li>Gel et dégel des canalisations</li>
                                                             <li>Racines d'arbres</li>
@@ -224,59 +239,71 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Question 2 -->
                             <div class="accordion-item border-0 shadow-sm mb-3">
                                 <h3 class="accordion-header" id="headingFive">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseFive">
                                         Pourquoi les fuites augmentent-elles en hiver ?
                                     </button>
                                 </h3>
-                                <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionCauses">
+                                <div id="collapseFive" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionCauses">
                                     <div class="accordion-body">
                                         <div class="alert alert-info">
-                                            <i class='bx bx-info-circle me-2'></i> Les fuites augmentent de 40% en période hivernale selon nos statistiques.
+                                            <i class='bx bx-info-circle me-2'></i> Les fuites augmentent de 40% en
+                                            période hivernale selon nos statistiques.
                                         </div>
                                         <p>Plusieurs facteurs expliquent cette augmentation :</p>
                                         <ol>
-                                            <li><strong>Dilatation/contraction :</strong> Les variations de température font travailler les matériaux</li>
-                                            <li><strong>Gel des canalisations :</strong> L'eau gelée prend plus de volume et peut fissurer les tuyaux</li>
-                                            <li><strong>Utilisation intensive :</strong> Chauffage et consommation accrue sollicitent les installations</li>
-                                            <li><strong>Détection plus difficile :</strong> Les inspections extérieures sont moins fréquentes</li>
+                                            <li><strong>Dilatation/contraction :</strong> Les variations de température
+                                                font travailler les matériaux</li>
+                                            <li><strong>Gel des canalisations :</strong> L'eau gelée prend plus de
+                                                volume et peut fissurer les tuyaux</li>
+                                            <li><strong>Utilisation intensive :</strong> Chauffage et consommation
+                                                accrue sollicitent les installations</li>
+                                            <li><strong>Détection plus difficile :</strong> Les inspections extérieures
+                                                sont moins fréquentes</li>
                                         </ol>
                                         <div class="mt-3 p-3 bg-light rounded">
-                                            <h6><i class='bx bx-shield-alt-2 text-primary me-2'></i>Conseil de prévention hivernale :</h6>
-                                            <p>Isoler vos tuyaux exposés et maintenir une température minimale dans les locaux inoccupés.</p>
+                                            <h6><i class='bx bx-shield-alt-2 text-primary me-2'></i>Conseil de
+                                                prévention hivernale :</h6>
+                                            <p>Isoler vos tuyaux exposés et maintenir une température minimale dans les
+                                                locaux inoccupés.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Solutions et réparations -->
                     <div id="solutions" class="faq-section mb-5">
                         <div class="d-flex align-items-center mb-4">
                             <i class='bx bx-wrench fs-1 text-primary me-3'></i>
                             <h2 class="mb-0">Solutions et réparations</h2>
                         </div>
-                        
+
                         <div class="accordion" id="accordionSolutions">
                             <!-- Question 1 -->
                             <div class="accordion-item border-0 shadow-sm mb-3">
                                 <h3 class="accordion-header" id="headingSix">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseSix">
                                         Que faire en cas de fuite d'eau détectée ?
                                     </button>
                                 </h3>
-                                <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionSolutions">
+                                <div id="collapseSix" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionSolutions">
                                     <div class="accordion-body">
                                         <div class="steps">
                                             <div class="step">
                                                 <div class="step-number bg-primary text-white">1</div>
                                                 <div class="step-content">
                                                     <h6>Coupez l'arrivée d'eau</h6>
-                                                    <p>Localisez et fermez le robinet d'arrêt principal pour limiter les dégâts.</p>
+                                                    <p>Localisez et fermez le robinet d'arrêt principal pour limiter les
+                                                        dégâts.</p>
                                                 </div>
                                             </div>
                                             <div class="step">
@@ -297,50 +324,58 @@
                                                 <div class="step-number bg-primary text-white">4</div>
                                                 <div class="step-content">
                                                     <h6>Contactez un professionnel</h6>
-                                                    <p>Appelez le PMAP au <strong>XX.XX.XX.XX.XX</strong> pour une intervention rapide.</p>
+                                                    <p>Appelez le PMAP au <strong>XX.XX.XX.XX.XX</strong> pour une
+                                                        intervention rapide.</p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Question 2 -->
                             <div class="accordion-item border-0 shadow-sm mb-3">
                                 <h3 class="accordion-header" id="headingSeven">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseSeven">
                                         Quelles sont les techniques de réparation utilisées ?
                                     </button>
                                 </h3>
-                                <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionSolutions">
+                                <div id="collapseSeven" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionSolutions">
                                     <div class="accordion-body">
                                         <div class="row g-4">
                                             <div class="col-md-4">
                                                 <div class="card h-100 border-0 shadow-sm">
                                                     <div class="card-body text-center">
-                                                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
+                                                        <div
+                                                            class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
                                                             <i class='bx bx-pulse fs-2'></i>
                                                         </div>
                                                         <h5>Détection non invasive</h5>
-                                                        <p>Utilisation de caméras endoscopiques et détecteurs acoustiques</p>
+                                                        <p>Utilisation de caméras endoscopiques et détecteurs
+                                                            acoustiques</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="card h-100 border-0 shadow-sm">
                                                     <div class="card-body text-center">
-                                                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
+                                                        <div
+                                                            class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
                                                             <i class='bx bx-cross fs-2'></i>
                                                         </div>
                                                         <h5>Réparation sans tranchée</h5>
-                                                        <p>Technologies de chemisage et résines époxy pour éviter les gros travaux</p>
+                                                        <p>Technologies de chemisage et résines époxy pour éviter les
+                                                            gros travaux</p>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="col-md-4">
                                                 <div class="card h-100 border-0 shadow-sm">
                                                     <div class="card-body text-center">
-                                                        <div class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
+                                                        <div
+                                                            class="icon-box bg-primary bg-opacity-10 text-primary mb-3">
                                                             <i class='bx bx-shield-alt-2 fs-2'></i>
                                                         </div>
                                                         <h5>Solutions durables</h5>
@@ -354,23 +389,25 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Prévention et maintenance -->
                     <div id="prevention" class="faq-section">
                         <div class="d-flex align-items-center mb-4">
                             <i class='bx bx-shield-alt-2 fs-1 text-primary me-3'></i>
                             <h2 class="mb-0">Prévention et maintenance</h2>
                         </div>
-                        
+
                         <div class="accordion" id="accordionPrevention">
                             <!-- Question 1 -->
                             <div class="accordion-item border-0 shadow-sm mb-3">
                                 <h3 class="accordion-header" id="headingEight">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseEight">
                                         Comment prévenir les fuites d'eau ?
                                     </button>
                                 </h3>
-                                <div id="collapseEight" class="accordion-collapse collapse" data-bs-parent="#accordionPrevention">
+                                <div id="collapseEight" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionPrevention">
                                     <div class="accordion-body">
                                         <div class="checklist">
                                             <div class="checklist-item">
@@ -391,31 +428,37 @@
                                             </div>
                                             <div class="checklist-item">
                                                 <i class='bx bx-check-circle text-success me-2'></i>
-                                                <span>Vidange et protection des installations extérieures en hiver</span>
+                                                <span>Vidange et protection des installations extérieures en
+                                                    hiver</span>
                                             </div>
                                         </div>
                                         <div class="mt-4">
                                             <div class="card border-primary">
                                                 <div class="card-header bg-primary text-white">
-                                                    <i class='bx bx-calendar me-2'></i> Calendrier de maintenance préventive
+                                                    <i class='bx bx-calendar me-2'></i> Calendrier de maintenance
+                                                    préventive
                                                 </div>
                                                 <div class="card-body">
                                                     <ul class="timeline">
                                                         <li class="timeline-item">
                                                             <span class="timeline-date">Tous les mois</span>
-                                                            <span class="timeline-text">Vérification visuelle des robinets et joints</span>
+                                                            <span class="timeline-text">Vérification visuelle des
+                                                                robinets et joints</span>
                                                         </li>
                                                         <li class="timeline-item">
                                                             <span class="timeline-date">Tous les 6 mois</span>
-                                                            <span class="timeline-text">Test de pression du réseau</span>
+                                                            <span class="timeline-text">Test de pression du
+                                                                réseau</span>
                                                         </li>
                                                         <li class="timeline-item">
                                                             <span class="timeline-date">Tous les ans</span>
-                                                            <span class="timeline-text">Inspection professionnelle complète</span>
+                                                            <span class="timeline-text">Inspection professionnelle
+                                                                complète</span>
                                                         </li>
                                                         <li class="timeline-item">
                                                             <span class="timeline-date">Tous les 5 ans</span>
-                                                            <span class="timeline-text">Remplacement préventif des éléments critiques</span>
+                                                            <span class="timeline-text">Remplacement préventif des
+                                                                éléments critiques</span>
                                                         </li>
                                                     </ul>
                                                 </div>
@@ -424,18 +467,20 @@
                                     </div>
                                 </div>
                             </div>
-                            
+
                             <!-- Question 2 -->
                             <div class="accordion-item border-0 shadow-sm mb-3">
                                 <h3 class="accordion-header" id="headingNine">
-                                    <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine">
+                                    <button class="accordion-button collapsed fw-bold" type="button"
+                                        data-bs-toggle="collapse" data-bs-target="#collapseNine">
                                         PM AND PARTNERS SARL propose-t-il des contrats de maintenance ?
                                     </button>
                                 </h3>
-                                <div id="collapseNine" class="accordion-collapse collapse" data-bs-parent="#accordionPrevention">
+                                <div id="collapseNine" class="accordion-collapse collapse"
+                                    data-bs-parent="#accordionPrevention">
                                     <div class="accordion-body">
                                         <p>Oui, nous proposons plusieurs formules adaptées à vos besoins :</p>
-                                        
+
                                         <div class="row g-4">
                                             <div class="col-md-4">
                                                 <div class="card h-100 border-primary">
@@ -444,9 +489,15 @@
                                                     </div>
                                                     <div class="card-body">
                                                         <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item"><i class='bx bx-check text-success me-2'></i> Inspection annuelle</li>
-                                                            <li class="list-group-item"><i class='bx bx-check text-success me-2'></i> Détection de fuites</li>
-                                                            <li class="list-group-item"><i class='bx bx-x text-muted me-2'></i> Interventions non incluses</li>
+                                                            <li class="list-group-item"><i
+                                                                    class='bx bx-check text-success me-2'></i>
+                                                                Inspection annuelle</li>
+                                                            <li class="list-group-item"><i
+                                                                    class='bx bx-check text-success me-2'></i> Détection
+                                                                de fuites</li>
+                                                            <li class="list-group-item"><i
+                                                                    class='bx bx-x text-muted me-2'></i> Interventions
+                                                                non incluses</li>
                                                         </ul>
                                                     </div>
                                                     <div class="card-footer bg-transparent border-0 text-center">
@@ -461,9 +512,15 @@
                                                     </div>
                                                     <div class="card-body">
                                                         <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item"><i class='bx bx-check text-success me-2'></i> 2 inspections annuelles</li>
-                                                            <li class="list-group-item"><i class='bx bx-check text-success me-2'></i> Détection de fuites</li>
-                                                            <li class="list-group-item"><i class='bx bx-check text-success me-2'></i> 1 intervention incluse</li>
+                                                            <li class="list-group-item"><i
+                                                                    class='bx bx-check text-success me-2'></i> 2
+                                                                inspections annuelles</li>
+                                                            <li class="list-group-item"><i
+                                                                    class='bx bx-check text-success me-2'></i> Détection
+                                                                de fuites</li>
+                                                            <li class="list-group-item"><i
+                                                                    class='bx bx-check text-success me-2'></i> 1
+                                                                intervention incluse</li>
                                                         </ul>
                                                     </div>
                                                     <div class="card-footer bg-transparent border-0 text-center">
@@ -478,9 +535,15 @@
                                                     </div>
                                                     <div class="card-body">
                                                         <ul class="list-group list-group-flush">
-                                                            <li class="list-group-item"><i class='bx bx-check text-success me-2'></i> 4 inspections annuelles</li>
-                                                            <li class="list-group-item"><i class='bx bx-check text-success me-2'></i> Surveillance 24/7</li>
-                                                            <li class="list-group-item"><i class='bx bx-check text-success me-2'></i> Interventions illimitées</li>
+                                                            <li class="list-group-item"><i
+                                                                    class='bx bx-check text-success me-2'></i> 4
+                                                                inspections annuelles</li>
+                                                            <li class="list-group-item"><i
+                                                                    class='bx bx-check text-success me-2'></i>
+                                                                Surveillance 24/7</li>
+                                                            <li class="list-group-item"><i
+                                                                    class='bx bx-check text-success me-2'></i>
+                                                                Interventions illimitées</li>
                                                         </ul>
                                                     </div>
                                                     <div class="card-footer bg-transparent border-0 text-center">
@@ -494,11 +557,12 @@
                             </div>
                         </div>
                     </div>
-                    
+
                     <!-- Call to Action -->
                     <div class="bg-light p-5 rounded-3 text-center mt-5">
                         <h3 class="mb-4">Vous ne trouvez pas la réponse à votre question ?</h3>
-                        <p class="mb-4">Notre équipe d'experts est à votre disposition pour répondre à toutes vos interrogations.</p>
+                        <p class="mb-4">Notre équipe d'experts est à votre disposition pour répondre à toutes vos
+                            interrogations.</p>
                         <a href="Contact.html" class="btn btn-primary btn-lg px-5">
                             <i class='bx bx-message-rounded me-2'></i> Contactez-nous
                         </a>
@@ -509,56 +573,10 @@
     </section>
 
     <!-- Footer -->
-    <div id="footer-placeholder"></div>
-
-    <script src="/js/include.js"></script>
+    {{> footer}}
 
     <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-
-    <script>
-        // Animation au scroll
-        document.addEventListener('DOMContentLoaded', function() {
-            const faqSections = document.querySelectorAll('.faq-section');
-            
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('animate__animated', 'animate__fadeInUp');
-                    }
-                });
-            }, {
-                threshold: 0.1
-            });
-            
-            faqSections.forEach(section => {
-                observer.observe(section);
-            });
-            
-            // Highlight active FAQ nav item
-            const faqNavItems = document.querySelectorAll('.faq-nav .list-group-item');
-            const sections = document.querySelectorAll('.faq-section');
-            
-            window.addEventListener('scroll', function() {
-                let current = '';
-                
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    
-                    if (pageYOffset >= (sectionTop - 300)) {
-                        current = section.getAttribute('id');
-                    }
-                });
-                
-                faqNavItems.forEach(item => {
-                    item.classList.remove('active');
-                    if (item.getAttribute('href') === `#${current}`) {
-                        item.classList.add('active');
-                    }
-                });
-            });
-        });
-    </script>
+    <script src="/src/js/faq.js"></script>
 </body>
+
 </html>

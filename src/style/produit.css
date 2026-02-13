@@ -59,3 +59,44 @@ main h1{
         grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
     }
 }
+
+/* From produits.html inline styles */
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.realisation {
+    border: 1px solid #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.realisation:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.realisation img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.realisation p {
+    padding: 1rem;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .realisations-grid {
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.5rem;
+    }
+}

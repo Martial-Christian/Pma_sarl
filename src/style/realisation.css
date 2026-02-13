@@ -59,3 +59,68 @@ main h1{
         grid-template-columns: 1fr; /* Une seule colonne sur les petits écrans */
     }
 }
+
+/* From Réalisation.html inline styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+/* Titres sections */
+h2 {
+    color: #2c3e50;
+    margin: 3rem 0 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 3px solid #3498db;
+    font-weight: 600;
+}
+
+/* Grille des réalisations */
+.realisations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+    justify-content: center;
+}
+
+.realisation {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+}
+
+.realisation:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.realisation img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.realisation p {
+    padding: 1.2rem;
+    margin: 0;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .realisations-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+        margin: 2rem 0 1rem;
+    }
+}

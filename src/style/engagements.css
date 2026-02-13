@@ -61,3 +61,65 @@
     background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
     transform: rotate(-45deg);
   }
+/* From Engagements.html inline styles */
+.leader-section {
+    margin-bottom: 3rem;
+}
+.leader-img {
+    max-width: 300px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 1.5rem;
+}
+.leader-title {
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+.highlight {
+    color: #2980b9;
+    font-weight: bold;
+}
+.divider {
+    height: 2px;
+    background: linear-gradient(to right, transparent, #3498db, transparent);
+    width: 80%;
+    margin: 2rem auto;
+}
+.values-section {
+    background-color: #f5f9ff;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2.5rem;
+    border-left: 4px solid #3498db;
+}
+.quote {
+    font-style: italic;
+    border-left: 3px solid #3498db;
+    padding-left: 1.5rem;
+    color: #555;
+    margin: 1.5rem 0;
+}
+.signature {
+    text-align: right;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 2rem;
+    font-weight: 500;
+}
+.value-card {
+    transition: transform 0.3s ease;
+    border-radius: 8px;
+    border: 1px solid #e9ecef;
+}
+.value-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+    .leader-img {
+        max-width: 100%;
+    }
+}
