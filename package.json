@@ -1,0 +1,19 @@
+{
+  "name": "pma_sarl",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "vite": "^6.4.1",
+    "vite-plugin-handlebars": "^2.0.0"
+  }
+}
